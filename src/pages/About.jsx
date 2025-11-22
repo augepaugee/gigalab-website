@@ -15,7 +15,7 @@ function About() {
                     <p style={{ fontSize: '1.3em', color: 'var(--light-gray)', marginBottom: '15px' }}>
                         We're a team of passionate technologists dedicated to helping businesses grow.
                     </p>
-                    <p style={{ fontSize: '1.1em', color: 'var(--primary-blue)', marginTop: '30px', marginBottom: '60px' }}>
+                    <p style={{ fontSize: '1.1em', color: 'var(--light-gray)', marginTop: '30px', marginBottom: '60px' }}>
                         Our company is registered as an individual activity in Lithuania and is subject to Lithuanian laws.
                     </p>
                 </div>
