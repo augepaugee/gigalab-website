@@ -185,15 +185,15 @@ function Contact() {
                     </form>
 
                     {/* Contact Info Cards */}
-                    <div className="contact-info-grid" style={{ display: 'flex', justifyContent: 'center', gap: '30px', maxWidth: '950px', margin: '0 auto' }}>
-                        <div className="contact-info-card" style={{ flex: '0 0 260px', width: '260px', minWidth: '260px', maxWidth: '260px' }}>
+                    <div className="contact-info-grid">
+                        <div className="contact-info-card">
                             <div className="info-icon">📧</div>
                             <h4>Email</h4>
                             <p><a href="mailto:company@gigalab.lt">company@gigalab.lt</a></p>
                             <p><a href="mailto:support@gigalab.lt">support@gigalab.lt</a></p>
                         </div>
 
-                        <div className="contact-info-card" style={{ flex: '0 0 360px', width: '360px', minWidth: '360px', maxWidth: '360px' }}>
+                        <div className="contact-info-card">
                             <div className="info-icon">📞</div>
                             <h4>Phone</h4>
                             <p><a href="tel:+37068491738">+370 684 91738</a></p>
@@ -201,7 +201,7 @@ function Contact() {
                             <p>Mon-Fri, 9:00 AM - 6:00 PM GMT +2</p>
                         </div>
 
-                        <div className="contact-info-card" style={{ flex: '0 0 260px', width: '260px', minWidth: '260px', maxWidth: '260px' }}>
+                        <div className="contact-info-card">
                             <div className="info-icon">📍</div>
                             <h4>Location</h4>
                             <p>Vilnius, Lithuania</p>
