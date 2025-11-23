@@ -130,7 +130,7 @@ function Header() {
             {/* Logo */}
             <div className="hero-logo">
                 <Link to="/">
-                    <h1>GIGALAB</h1>
+                    <h1>GIGGALAB</h1>
                 </Link>
             </div>
 

@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       <div className="footer-content">
         <div className="footer-brand">
-          <h3>GIGALAB</h3>
+          <h3>GIGGALAB</h3>
           <p>Your success is our mission. We create digital solutions that drive real business results.</p>
         </div>
         <div className="footer-links">
@@ -36,7 +36,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 GIGALAB. Your Success, Our Mission.</p>
+        <p>&copy; 2025 GIGGALAB. Your Success, Our Mission.</p>
       </div>
     </footer>
   );

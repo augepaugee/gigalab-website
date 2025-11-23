@@ -189,8 +189,8 @@ function Contact() {
                         <div className="contact-info-card">
                             <div className="info-icon">📧</div>
                             <h4>Email</h4>
-                            <p><a href="mailto:company@gigalab.lt">company@gigalab.lt</a></p>
-                            <p><a href="mailto:support@gigalab.lt">support@gigalab.lt</a></p>
+                            <p><a href="mailto:company@giggalab.lt">company@giggalab.lt</a></p>
+                            <p><a href="mailto:support@giggalab.lt">support@giggalab.lt</a></p>
                         </div>
 
                         <div className="contact-info-card">
