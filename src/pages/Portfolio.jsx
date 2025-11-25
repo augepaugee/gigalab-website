@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // Import projects directly
 import { project1 } from '../portfolio/project1';
+import { project2 } from '../portfolio/project2';
 
 function Portfolio() {
     const [projects, setProjects] = useState([]);
@@ -11,6 +12,7 @@ function Portfolio() {
         // Add all imported projects to the array
         const allProjects = [
             project1,
+            project2,
             // Add more projects here as you create them
         ];
         
