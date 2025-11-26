@@ -229,6 +229,7 @@ function Portfolio() {
                                 </div>
                             ))}
                         </div>
+                        //LABAS
                     ) : (
                         <p style={{ textAlign: 'center', color: 'var(--light-gray)' }}>
                             Loading projects...

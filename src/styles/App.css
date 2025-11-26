@@ -1076,6 +1076,17 @@ footer {
         color: var(--electric-blue);
     }
 
+/* Portfolio Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+}
+
+.project-card {
+    margin-bottom: 60px;
+}
+
 /* Responsive - Base Styles */
 @media (max-width: 968px) {
     .grid-2, .grid-3, .grid-4 {
