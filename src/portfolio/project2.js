@@ -2,7 +2,7 @@
 export const project2 = {
     id: 2,
     title: "CarSales Platform",
-    description: "A comprehensive automotive marketplace platform designed to revolutionize the car buying and selling experience. CarSales features an intuitive catalog system with advanced search capabilities, allowing users to easily browse and filter through extensive vehicle inventories. The platform includes a powerful admin dashboard for managing listings, inventory, and user interactions. With a focus on user experience, CarSales provides detailed vehicle information, customer testimonials, and seamless navigation. The platform combines modern web technologies with user-centric design to create an efficient and enjoyable car trading experience for both buyers and sellers.",
+    description: "CarSales: We offer a better way to buy and sell vehicles, built around a simple user experience: Intuitive Car catalog: Find your perfect car fast with advanced search and filtering. Detailed listings: Get all the vehicle information you need, plus customer testimonials. Powerful admin dashboard: Easily manage all listings, inventory, and user activity. Modern & efficient: A seamless experience for both buyers and sellers.",
     website: null, // Add website URL if available
     images: [
         "/Project-CarSales/CarSales-Search.png",
