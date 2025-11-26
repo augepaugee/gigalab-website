@@ -892,6 +892,22 @@ footer {
     font-size: 1em;
     font-family: inherit;
     transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234D4DFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+    padding-right: 50px;
+}
+
+.form-group input,
+.form-group textarea {
+    background-image: none;
+    padding-right: 20px;
+    cursor: text;
 }
 
     .form-group input:focus,
@@ -900,8 +916,28 @@ footer {
         outline: none;
         border-color: var(--primary-blue);
         box-shadow: 0 0 0 4px rgba(77, 77, 255, 0.1);
-        background: var(--dark-bg);
+        background-color: var(--dark-bg);
     }
+
+.form-group select {
+    background-color: var(--darker-bg);
+}
+
+    .form-group select:hover {
+        border-color: var(--electric-blue);
+        background-color: var(--dark-bg);
+    }
+
+    .form-group select:focus {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B6BFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    }
+
+.form-group select option {
+    background: var(--card-bg);
+    color: var(--text-gray);
+    padding: 12px;
+    border-radius: 8px;
+}
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {

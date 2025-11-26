@@ -1,5 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import CustomSelect from '../components/CustomSelect';
 
 function Contact() {
     const { t } = useLanguage();
@@ -133,36 +134,40 @@ function Contact() {
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="service">{t.contact.form.service}</label>
-                                <select
+                                <CustomSelect
                                     id="service"
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
-                                >
-                                    <option value="">{t.contact.form.serviceOptions.select}</option>
-                                    <option value="design">{t.contact.form.serviceOptions.design}</option>
-                                    <option value="development">{t.contact.form.serviceOptions.development}</option>
-                                    <option value="launch">{t.contact.form.serviceOptions.launch}</option>
-                                    <option value="maintenance">{t.contact.form.serviceOptions.maintenance}</option>
-                                    <option value="consulting">{t.contact.form.serviceOptions.consulting}</option>
-                                    <option value="full-package">{t.contact.form.serviceOptions.fullPackage}</option>
-                                </select>
+                                    placeholder={t.contact.form.serviceOptions.select}
+                                    options={[
+                                        { value: '', label: t.contact.form.serviceOptions.select },
+                                        { value: 'design', label: t.contact.form.serviceOptions.design },
+                                        { value: 'development', label: t.contact.form.serviceOptions.development },
+                                        { value: 'launch', label: t.contact.form.serviceOptions.launch },
+                                        { value: 'maintenance', label: t.contact.form.serviceOptions.maintenance },
+                                        { value: 'consulting', label: t.contact.form.serviceOptions.consulting },
+                                        { value: 'full-package', label: t.contact.form.serviceOptions.fullPackage }
+                                    ]}
+                                />
                             </div>
 
                             <div className="form-group">
                                 <label htmlFor="budget">{t.contact.form.budget}</label>
-                                <select
+                                <CustomSelect
                                     id="budget"
                                     name="budget"
                                     value={formData.budget}
                                     onChange={handleChange}
-                                >
-                                    <option value="">{t.contact.form.budgetOptions.select}</option>
-                                    <option value="5k-10k">{t.contact.form.budgetOptions.range1}</option>
-                                    <option value="10k-25k">{t.contact.form.budgetOptions.range2}</option>
-                                    <option value="25k-50k">{t.contact.form.budgetOptions.range3}</option>
-                                    <option value="50k+">{t.contact.form.budgetOptions.range4}</option>
-                                </select>
+                                    placeholder={t.contact.form.budgetOptions.select}
+                                    options={[
+                                        { value: '', label: t.contact.form.budgetOptions.select },
+                                        { value: '5k-10k', label: t.contact.form.budgetOptions.range1 },
+                                        { value: '10k-25k', label: t.contact.form.budgetOptions.range2 },
+                                        { value: '25k-50k', label: t.contact.form.budgetOptions.range3 },
+                                        { value: '50k+', label: t.contact.form.budgetOptions.range4 }
+                                    ]}
+                                />
                             </div>
                         </div>
 
