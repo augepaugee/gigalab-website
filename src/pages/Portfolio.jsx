@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 // Import projects directly
 import { project1 } from '../portfolio/project1';
 import { project2 } from '../portfolio/project2';
 
 function Portfolio() {
+    const { t } = useLanguage();
     const [projects, setProjects] = useState([]);
     const [currentSlides, setCurrentSlides] = useState({});
 
@@ -61,10 +63,10 @@ function Portfolio() {
         <div className="page">
             <div className="portfolio-hero" style={{ display: 'block', paddingBottom: '100px' }}>
                 <div style={{ maxWidth: '800px', textAlign: 'center', margin: '0 auto', marginBottom: '80px' }}>
-                    <span className="section-label">OUR WORK</span>
-                    <h1 style={{ fontSize: '3.5em', color: 'white', marginBottom: '20px', fontWeight: '800' }}>Portfolio</h1>
+                    <span className="section-label">{t.portfolio.label}</span>
+                    <h1 style={{ fontSize: '3.5em', color: 'white', marginBottom: '20px', fontWeight: '800' }}>{t.portfolio.title}</h1>
                     <p style={{ fontSize: '1.3em', color: 'var(--light-gray)', marginBottom: '60px' }}>
-                        Discover how we've helped businesses elevate their online impact
+                        {t.portfolio.subtitle}
                     </p>
                 </div>
 
@@ -222,17 +224,16 @@ function Portfolio() {
                                                 onMouseOver={(e) => e.target.style.opacity = '0.8'}
                                                 onMouseOut={(e) => e.target.style.opacity = '1'}
                                             >
-                                                Visit Website →
+                                                {t.portfolio.visitWebsite} →
                                             </a>
                                         </div>
                                     )}
                                 </div>
                             ))}
                         </div>
-                        //LABAS
                     ) : (
                         <p style={{ textAlign: 'center', color: 'var(--light-gray)' }}>
-                            Loading projects...
+                            {t.portfolio.loading}
                         </p>
                     )}
                 </div>

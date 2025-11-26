@@ -1,6 +1,9 @@
 ﻿import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function Contact() {
+    const { t } = useLanguage();
+    
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -48,13 +51,13 @@ function Contact() {
         <div className="page">
             <div className="contact-hero" style={{ display: 'block', paddingBottom: '100px' }}>
                 <div style={{ maxWidth: '800px', textAlign: 'center', margin: '0 auto', marginBottom: '80px' }}>
-                    <span className="section-label">GET IN TOUCH</span>
-                    <h1 style={{ fontSize: '3.5em', color: 'white', marginBottom: '20px', fontWeight: '800' }}>Contact Us</h1>
+                    <span className="section-label">{t.contact.label}</span>
+                    <h1 style={{ fontSize: '3.5em', color: 'white', marginBottom: '20px', fontWeight: '800' }}>{t.contact.title}</h1>
                     <p style={{ fontSize: '1.3em', color: 'var(--light-gray)', marginBottom: '15px' }}>
-                        Have a project in mind? Let's discuss how we can help transform your business
+                        {t.contact.subtitle}
                     </p>
                     <p style={{ fontSize: '1.1em', color: 'var(--primary-blue)', marginTop: '30px', marginBottom: '60px' }}>
-                        Fill out this form or contact us via contacts below
+                        {t.contact.formNote}
                     </p>
                 </div>
 
@@ -63,8 +66,8 @@ function Contact() {
                     {submitted && (
                         <div className="success-message">
                             <div className="success-icon">✓</div>
-                            <h3>Message Sent Successfully!</h3>
-                            <p>We'll get back to you within 24 hours.</p>
+                            <h3>{t.contact.success.title}</h3>
+                            <p>{t.contact.success.message}</p>
                         </div>
                     )}
 
@@ -72,7 +75,7 @@ function Contact() {
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="name">
-                                    Full Name <span className="required">*</span>
+                                    {t.contact.form.fullName} <span className="required">{t.contact.form.required}</span>
                                 </label>
                                 <input
                                     type="text"
@@ -81,13 +84,13 @@ function Contact() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    placeholder="John Doe"
+                                    placeholder={t.contact.form.placeholders.name}
                                 />
                             </div>
 
                             <div className="form-group">
                                 <label htmlFor="email">
-                                    Email Address <span className="required">*</span>
+                                    {t.contact.form.email} <span className="required">{t.contact.form.required}</span>
                                 </label>
                                 <input
                                     type="email"
@@ -96,76 +99,76 @@ function Contact() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    placeholder="john@example.com"
+                                    placeholder={t.contact.form.placeholders.email}
                                 />
                             </div>
                         </div>
 
                         <div className="form-row">
                             <div className="form-group">
-                                <label htmlFor="phone">Phone Number</label>
+                                <label htmlFor="phone">{t.contact.form.phone}</label>
                                 <input
                                     type="tel"
                                     id="phone"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    placeholder="+370 000 00000"
+                                    placeholder={t.contact.form.placeholders.phone}
                                 />
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="company">Company Name</label>
+                                <label htmlFor="company">{t.contact.form.company}</label>
                                 <input
                                     type="text"
                                     id="company"
                                     name="company"
                                     value={formData.company}
                                     onChange={handleChange}
-                                    placeholder="Your Company"
+                                    placeholder={t.contact.form.placeholders.company}
                                 />
                             </div>
                         </div>
 
                         <div className="form-row">
                             <div className="form-group">
-                                <label htmlFor="service">Service Interested In</label>
+                                <label htmlFor="service">{t.contact.form.service}</label>
                                 <select
                                     id="service"
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
                                 >
-                                    <option value="">Select a service</option>
-                                    <option value="design">Design</option>
-                                    <option value="development">Development</option>
-                                    <option value="launch">Launch</option>
-                                    <option value="maintenance">Maintenance</option>
-                                    <option value="consulting">Consulting</option>
-                                    <option value="full-package">Full Package</option>
+                                    <option value="">{t.contact.form.serviceOptions.select}</option>
+                                    <option value="design">{t.contact.form.serviceOptions.design}</option>
+                                    <option value="development">{t.contact.form.serviceOptions.development}</option>
+                                    <option value="launch">{t.contact.form.serviceOptions.launch}</option>
+                                    <option value="maintenance">{t.contact.form.serviceOptions.maintenance}</option>
+                                    <option value="consulting">{t.contact.form.serviceOptions.consulting}</option>
+                                    <option value="full-package">{t.contact.form.serviceOptions.fullPackage}</option>
                                 </select>
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="budget">Project Budget</label>
+                                <label htmlFor="budget">{t.contact.form.budget}</label>
                                 <select
                                     id="budget"
                                     name="budget"
                                     value={formData.budget}
                                     onChange={handleChange}
                                 >
-                                    <option value="">Select budget range</option>
-                                    <option value="5k-10k">€5,000 - €10,000</option>
-                                    <option value="10k-25k">€10,000 - €25,000</option>
-                                    <option value="25k-50k">€25,000 - €50,000</option>
-                                    <option value="50k+">€50,000+</option>
+                                    <option value="">{t.contact.form.budgetOptions.select}</option>
+                                    <option value="5k-10k">{t.contact.form.budgetOptions.range1}</option>
+                                    <option value="10k-25k">{t.contact.form.budgetOptions.range2}</option>
+                                    <option value="25k-50k">{t.contact.form.budgetOptions.range3}</option>
+                                    <option value="50k+">{t.contact.form.budgetOptions.range4}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="message">
-                                Project Details <span className="required">*</span>
+                                {t.contact.form.message} <span className="required">{t.contact.form.required}</span>
                             </label>
                             <textarea
                                 id="message"
@@ -174,12 +177,12 @@ function Contact() {
                                 onChange={handleChange}
                                 required
                                 rows="6"
-                                placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
+                                placeholder={t.contact.form.placeholders.message}
                             ></textarea>
                         </div>
 
                         <button type="submit" className="submit-btn-modern">
-                            <span>Send Message</span>
+                            <span>{t.contact.form.submit}</span>
                             <span className="btn-arrow">→</span>
                         </button>
                     </form>
@@ -188,24 +191,24 @@ function Contact() {
                     <div className="contact-info-grid">
                         <div className="contact-info-card">
                             <div className="info-icon">📧</div>
-                            <h4>Email</h4>
+                            <h4>{t.contact.info.email}</h4>
                             <p><a href="mailto:company@giggalab.lt">company@giggalab.lt</a></p>
                             <p><a href="mailto:support@giggalab.lt">support@giggalab.lt</a></p>
                         </div>
 
                         <div className="contact-info-card">
                             <div className="info-icon">📞</div>
-                            <h4>Phone</h4>
+                            <h4>{t.contact.info.phone}</h4>
                             <p><a href="tel:+37068491738">+370 684 91738</a></p>
                             <p><a href="tel:+37063022810">+370 630 22810</a></p>
-                            <p>Mon-Fri, 9:00 AM - 6:00 PM GMT +2</p>
+                            <p>{t.contact.info.phoneHours}</p>
                         </div>
 
                         <div className="contact-info-card">
                             <div className="info-icon">📍</div>
-                            <h4>Location</h4>
-                            <p>Vilnius, Lithuania</p>
-                            <p>European Union</p>
+                            <h4>{t.contact.info.location}</h4>
+                            <p>{t.contact.info.locationDetails[0]}</p>
+                            <p>{t.contact.info.locationDetails[1]}</p>
                         </div>
                     </div>
                 </div>

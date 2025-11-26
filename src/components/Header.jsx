@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
+    const { language, toggleLanguage, t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -148,16 +150,16 @@ function Header() {
             {/* Navigation */}
             <nav className={mobileMenuOpen ? 'mobile-open' : ''}>
                 <Link to="/services" className={isActive('/services')} onClick={() => setMobileMenuOpen(false)}>
-                    Services
+                    {t.nav.services}
                 </Link>
                 <Link to="/portfolio" className={isActive('/portfolio')} onClick={() => setMobileMenuOpen(false)}>
-                    Portfolio
+                    {t.nav.portfolio}
                 </Link>
                 <Link to="/about" className={isActive('/about')} onClick={() => setMobileMenuOpen(false)}>
-                    About
+                    {t.nav.about}
                 </Link>
                 <Link to="/contact" className={isActive('/contact')} onClick={() => setMobileMenuOpen(false)}>
-                    Contact
+                    {t.nav.contact}
                 </Link>
             </nav>
 

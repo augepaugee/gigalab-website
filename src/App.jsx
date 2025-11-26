@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
+import LanguageSelector from './components/LanguageSelector';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -22,7 +24,17 @@ function ScrollToTop() {
     return null;
 }
 
-function App() {
+function AppContent() {
+    const { isLanguageSelected, selectLanguage } = useLanguage();
+    const [showSelector, setShowSelector] = React.useState(!isLanguageSelected);
+
+    const handleLanguageSelect = (lang) => {
+        selectLanguage(lang); // Switch language immediately
+        setTimeout(() => {
+            setShowSelector(false); // Remove selector after animation
+        }, 300);
+    };
+
     return (
         <Router>
             <div className="App">
@@ -36,8 +48,17 @@ function App() {
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />
+                {showSelector && <LanguageSelector onSelectLanguage={handleLanguageSelect} />}
             </div>
         </Router>
+    );
+}
+
+function App() {
+    return (
+        <LanguageProvider>
+            <AppContent />
+        </LanguageProvider>
     );
 }
 
