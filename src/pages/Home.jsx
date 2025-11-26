@@ -58,7 +58,7 @@ function Home() {
                         <div className="floating-card card-3">
                             <div className="card-icon">🎯</div>
                             <div className="card-title">{t.home.cards.successRate}</div>
-                            <div className="card-stat">98%</div>
+                            <div className="card-stat">100%</div>
                         </div>
                     </div>
                 </div>
