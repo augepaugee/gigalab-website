@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -161,6 +162,7 @@ function Header() {
                 <Link to="/contact" className={isActive('/contact')} onClick={() => setMobileMenuOpen(false)}>
                     {t.nav.contact}
                 </Link>
+                <LanguageSwitcher />
             </nav>
 
             {/* Mobile Menu Overlay */}

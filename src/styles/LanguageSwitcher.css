@@ -1,0 +1,140 @@
+.language-switcher {
+    position: relative;
+    z-index: 100;
+}
+
+.language-switcher-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(77, 77, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.language-switcher-button:hover {
+    background: rgba(77, 77, 255, 0.15);
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.flag-icon {
+    width: 24px;
+    height: 16px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.language-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+    background: var(--card-bg);
+    border: 1px solid rgba(77, 77, 255, 0.2);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    animation: dropdownSlide 0.2s ease;
+}
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+}
+
+.language-option:hover {
+    background: rgba(77, 77, 255, 0.15);
+    color: white;
+}
+
+.language-option.active {
+    background: rgba(77, 77, 255, 0.2);
+    color: var(--primary-blue);
+}
+
+.language-name {
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+}
+
+.check-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--primary-blue);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .language-switcher-button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .flag-icon {
+        width: 20px;
+        height: 14px;
+    }
+
+    .language-label {
+        font-size: 0.85em;
+    }
+
+    .dropdown-arrow {
+        width: 18px;
+        height: 18px;
+    }
+
+    .language-dropdown {
+        min-width: 140px;
+    }
+
+    .language-option {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+}

@@ -26,7 +26,7 @@ function ScrollToTop() {
 }
 
 function AppContent() {
-    const { isLanguageSelected, selectLanguage } = useLanguage();
+    const { isLanguageSelected, selectLanguage, isTransitioning } = useLanguage();
     const [showSelector, setShowSelector] = React.useState(!isLanguageSelected);
 
     const handleLanguageSelect = (lang) => {
@@ -38,7 +38,7 @@ function AppContent() {
 
     return (
         <Router>
-            <div className="App">
+            <div className={`App ${isTransitioning ? 'language-transitioning' : ''}`}>
                 <ScrollToTop />
                 <Header />
                 <Routes>

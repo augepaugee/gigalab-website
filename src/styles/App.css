@@ -29,6 +29,19 @@ body {
     line-height: 1.6;
 }
 
+/* Language Transition Effect */
+.App {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.App.language-transitioning {
+    opacity: 0.7;
+}
+
+.App.language-transitioning * {
+    pointer-events: none;
+}
+
 /* Page wrapper with transition animation */
 .page {
     width: 100%;

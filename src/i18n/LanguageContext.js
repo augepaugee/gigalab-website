@@ -12,34 +12,39 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState(null);
-    const [isLanguageSelected, setIsLanguageSelected] = useState(false);
-
-    useEffect(() => {
-        // Check if user has already selected a language
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            setLanguage(savedLanguage);
-            setIsLanguageSelected(true);
-        }
-    }, []);
+    // Initialize from localStorage if available
+    const savedLanguage = localStorage.getItem('language');
+    const [language, setLanguage] = useState(savedLanguage || null);
+    const [isLanguageSelected, setIsLanguageSelected] = useState(!!savedLanguage);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     const selectLanguage = (lang) => {
-        setLanguage(lang);
-        setIsLanguageSelected(true);
-        localStorage.setItem('language', lang);
+        if (lang === language) return; // Don't transition if same language
+        
+        setIsTransitioning(true);
+        
+        // Fade out
+        setTimeout(() => {
+            setLanguage(lang);
+            setIsLanguageSelected(true);
+            localStorage.setItem('language', lang);
+            
+            // Fade in
+            setTimeout(() => {
+                setIsTransitioning(false);
+            }, 50);
+        }, 200);
     };
 
     const toggleLanguage = () => {
         const newLang = language === 'en' ? 'lt' : 'en';
-        setLanguage(newLang);
-        localStorage.setItem('language', newLang);
+        selectLanguage(newLang);
     };
 
     const t = language ? translations[language] : translations['en'];
 
     return (
-        <LanguageContext.Provider value={{ language, selectLanguage, toggleLanguage, isLanguageSelected, t }}>
+        <LanguageContext.Provider value={{ language, selectLanguage, toggleLanguage, isLanguageSelected, isTransitioning, t }}>
             {children}
         </LanguageContext.Provider>
     );
