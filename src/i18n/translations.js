@@ -168,6 +168,19 @@ export const translations = {
             connect: "Connect",
             connectLinks: ["LinkedIn", "Instagram", "GitHub", "Contact"],
             copyright: "2025 GIGGALAB. Your Success, Our Mission."
+        },
+        // Chat Widget
+        chat: {
+            title: "GigaLab Support",
+            status: "Online",
+            placeholder: "Type your message...",
+            welcome: "Hello! How can we help you today?",
+            greeting: "Hello! How can I assist you today?",
+            servicesResponse: "We offer web development, mobile apps, AI/ML solutions, and more. Visit our Services page for details!",
+            priceResponse: "Our pricing varies by project. Please contact us through the Contact page for a custom quote!",
+            contactResponse: "You can reach us through our Contact page or email us directly!",
+            portfolioResponse: "Check out our Portfolio page to see our latest projects!",
+            defaultResponse: "Thank you for your message! For specific inquiries, please visit our Contact page or email us directly."
         }
     },
     lt: {
@@ -339,6 +352,19 @@ export const translations = {
             connect: "Susisiekite",
             connectLinks: ["LinkedIn", "Instagram", "GitHub", "Kontaktai"],
             copyright: "2025 GIGGALAB. Jūsų sėkmė, mūsų misija."
+        },
+        // Chat Widget
+        chat: {
+            title: "GigaLab Pagalba",
+            status: "Prisijungę",
+            placeholder: "Rašykite žinutę...",
+            welcome: "Sveiki! Kaip galime jums padėti?",
+            greeting: "Sveiki! Kaip galiu jums padėti?",
+            servicesResponse: "Siūlome internetinių svetainių kūrimą, mobiliąsias programas, AI/ML sprendimus ir dar daugiau. Aplankykite mūsų Paslaugų puslapį!",
+            priceResponse: "Mūsų kainos priklauso nuo projekto. Prašome susisiekti per Kontaktų puslapį ir gauti individualią pasiūlymą!",
+            contactResponse: "Galite mus pasiekti per Kontaktų puslapį arba tiesiogiai el. paštu!",
+            portfolioResponse: "Peržiūrėkite mūsų Projektų puslapį, kad pamatytumėte naujausius darbus!",
+            defaultResponse: "Ačiū už jūsų žinutę! Jei turite konkrečių klausimų, aplankykite Kontaktų puslapį arba parašykite mums el. paštu."
         }
     }
 };

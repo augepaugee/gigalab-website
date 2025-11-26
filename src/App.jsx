@@ -4,6 +4,7 @@ import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
 import LanguageSelector from './components/LanguageSelector';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ChatWidget from './components/ChatWidget';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
@@ -48,6 +49,7 @@ function AppContent() {
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />
+                <ChatWidget />
                 {showSelector && <LanguageSelector onSelectLanguage={handleLanguageSelect} />}
             </div>
         </Router>
