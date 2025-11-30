@@ -162,10 +162,10 @@ function Contact() {
                                     placeholder={t.contact.form.budgetOptions.select}
                                     options={[
                                         { value: '', label: t.contact.form.budgetOptions.select },
-                                        { value: '5k-10k', label: t.contact.form.budgetOptions.range1 },
-                                        { value: '10k-25k', label: t.contact.form.budgetOptions.range2 },
-                                        { value: '25k-50k', label: t.contact.form.budgetOptions.range3 },
-                                        { value: '50k+', label: t.contact.form.budgetOptions.range4 }
+                                        { value: '0-50', label: t.contact.form.budgetOptions.range1 },
+                                        { value: '50-200', label: t.contact.form.budgetOptions.range2 },
+                                        { value: '200-500', label: t.contact.form.budgetOptions.range3 },
+                                        { value: '500+', label: t.contact.form.budgetOptions.range4 }
                                     ]}
                                 />
                             </div>

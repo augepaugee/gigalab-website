@@ -142,10 +142,10 @@ export const translations = {
                 },
                 budgetOptions: {
                     select: "Select budget range",
-                    range1: "€5,000 - €10,000",
-                    range2: "€10,000 - €25,000",
-                    range3: "€25,000 - €50,000",
-                    range4: "€50,000+"
+                    range1: "€0 - €50",
+                    range2: "€50 - €200",
+                    range3: "€200 - €500",
+                    range4: "€500+"
                 },
                 submit: "Send Message"
             },
@@ -326,10 +326,10 @@ export const translations = {
                 },
                 budgetOptions: {
                     select: "Pasirinkite biudžeto ribas",
-                    range1: "€5,000 - €10,000",
-                    range2: "€10,000 - €25,000",
-                    range3: "€25,000 - €50,000",
-                    range4: "€50,000+"
+                    range1: "€0 - €50",
+                    range2: "€50 - €200",
+                    range3: "€200 - €500",
+                    range4: "€500+"
                 },
                 submit: "Siųsti žinutę"
             },
