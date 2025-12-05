@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 // Import projects directly
 import { project1 } from '../portfolio/project1';
 import { project2 } from '../portfolio/project2';
+import { project3 } from '../portfolio/project3';
 
 function Portfolio() {
     const { t } = useLanguage();
@@ -15,6 +16,7 @@ function Portfolio() {
         const allProjects = [
             project1,
             project2,
+            project3,
             // Add more projects here as you create them
         ];
         
