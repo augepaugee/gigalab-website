@@ -221,8 +221,7 @@ function Contact() {
                         <div className="contact-info-card">
                             <div className="info-icon">📧</div>
                             <h4>{t.contact.info.email}</h4>
-                            <p><a href="mailto:company@giggalab.lt">company@giggalab.lt</a></p>
-                            <p><a href="mailto:support@giggalab.lt">support@giggalab.lt</a></p>
+                            <p><a href="mailto:team@giggalab.com">team@giggalab.com</a></p>
                         </div>
 
                         <div className="contact-info-card">
