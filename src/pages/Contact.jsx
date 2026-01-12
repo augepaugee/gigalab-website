@@ -1,6 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import CustomSelect from '../components/CustomSelect';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
     const { t } = useLanguage();
@@ -31,21 +32,44 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
+        
+        // EmailJS configuration from environment variables
+        const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+        
+        // Send email using EmailJS
+        emailjs.send(serviceId, templateId, {
+            from_name: formData.name,
+            from_email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            service: formData.service,
+            budget: formData.budget,
+            message: formData.message,
+            to_email: 'team@giggalab.com'
+        }, publicKey)
+        .then((response) => {
+            console.log('Email sent successfully:', response);
+            setSubmitted(true);
 
-        setTimeout(() => {
-            setSubmitted(false);
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                company: '',
-                service: '',
-                budget: '',
-                message: ''
-            });
-        }, 3000);
+            setTimeout(() => {
+                setSubmitted(false);
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    company: '',
+                    service: '',
+                    budget: '',
+                    message: ''
+                });
+            }, 3000);
+        })
+        .catch((error) => {
+            console.error('Failed to send email:', error);
+            alert('Failed to send message. Please try again or contact us directly at team@giggalab.com');
+        });
     };
 
     return (
