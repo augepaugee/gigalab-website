@@ -171,16 +171,42 @@ export const translations = {
         },
         // Chat Widget
         chat: {
-            title: "GigaLab Support",
+            title: "GiggaLAB Support",
             status: "Online",
             placeholder: "Type your message...",
-            welcome: "Hello! How can we help you today?",
+            welcome: "Hello! How can we help you today? 👋",
             greeting: "Hello! How can I assist you today?",
             servicesResponse: "We offer web development, mobile apps, AI/ML solutions, and more. Visit our Services page for details!",
-            priceResponse: "Our pricing varies by project. Please contact us through the Contact page for a custom quote!",
-            contactResponse: "You can reach us through our Contact page or email us directly!",
+            priceResponse: "Our pricing varies based on project scope and requirements. For a detailed quote tailored to your needs, please contact our team at team@giggalab.com or visit our Contact page!",
+            contactResponse: "You can reach us at team@giggalab.com or through our Contact page. We'll get back to you within 24 hours!",
             portfolioResponse: "Check out our Portfolio page to see our latest projects!",
-            defaultResponse: "Thank you for your message! For specific inquiries, please visit our Contact page or email us directly."
+
+            // Company Information
+            aboutResponse: "GIGGALAB is a technology company based in Vilnius, Lithuania. We're passionate about helping businesses grow through innovative digital solutions. Our mission: Your Success Drives Our Mission!",
+            locationResponse: "We're located in Vilnius, Lithuania, in the heart of the European Union. We work with clients both locally and internationally!",
+            teamResponse: "We're a team of passionate developers, designers, and technology experts dedicated to delivering excellence. We combine creativity with technical expertise to build solutions that drive real results!",
+
+            // Business Details
+            hoursResponse: "Our support team is available Monday to Friday, 9:00 AM - 6:00 PM (GMT+2). For urgent matters, you can always email us at team@giggalab.com!",
+            experienceResponse: "We have extensive experience in web development, mobile apps, AI/ML solutions, and digital transformation. Each project is tailored to meet specific business goals!",
+            industriesResponse: "We work with businesses across various industries including e-commerce, healthcare, fintech, education, and more. Every industry has unique challenges, and we love solving them!",
+
+            // Technical Information
+            technologiesResponse: "We use cutting-edge technologies including React, Node.js, Python, AI/ML frameworks, cloud platforms (AWS, Azure, Google Cloud), and more. We always choose the best tech stack for your specific needs!",
+            processResponse: "Our process: 1) Discover - understanding your needs, 2) Strategize - planning the solution, 3) Execute - building and testing, 4) Grow - ongoing support and optimization. Visit our website to learn more!",
+            timelineResponse: "Project timelines vary based on scope and complexity. Simple projects can take 2-4 weeks, while complex solutions may take 2-6 months. Contact us at team@giggalab.com for a specific timeline!",
+
+            // Support & Maintenance
+            supportResponse: "We offer 24/7 technical support, regular updates, security monitoring, and performance optimization. Your success is ongoing, and so is our support!",
+            maintenanceResponse: "Our maintenance services include regular updates, security patches, performance monitoring, backup management, and feature enhancements. We keep your solution running smoothly!",
+
+            // Common Questions
+            whyChooseResponse: "We're different because your success is literally our mission. We don't just deliver projects - we become your technology partner. We only thrive when you thrive!",
+            startResponse: "Getting started is easy! Contact us at team@giggalab.com or fill out our Contact form. We'll schedule a free consultation to discuss your project and goals!",
+            guaranteeResponse: "We're committed to delivering high-quality solutions. We work closely with you throughout the process, ensuring the final product meets your expectations and business goals!",
+
+            // Default
+            defaultResponse: "Thank you for your message! For specific inquiries about pricing, services, or projects, please contact us at team@giggalab.com or visit our Contact page."
         }
     },
     lt: {
@@ -355,16 +381,42 @@ export const translations = {
         },
         // Chat Widget
         chat: {
-            title: "GigaLab Pagalba",
+            title: "GiggaLAB Pagalba",
             status: "Prisijungę",
             placeholder: "Rašykite žinutę...",
-            welcome: "Sveiki! Kaip galime jums padėti?",
+            welcome: "Sveiki! Kaip galime jums padėti? 👋",
             greeting: "Sveiki! Kaip galiu jums padėti?",
             servicesResponse: "Siūlome internetinių svetainių kūrimą, mobiliąsias programas, AI/ML sprendimus ir dar daugiau. Aplankykite mūsų Paslaugų puslapį!",
-            priceResponse: "Mūsų kainos priklauso nuo projekto. Prašome susisiekti per Kontaktų puslapį ir gauti individualią pasiūlymą!",
-            contactResponse: "Galite mus pasiekti per Kontaktų puslapį arba tiesiogiai el. paštu!",
+            priceResponse: "Mūsų kainos priklauso nuo projekto apimties ir reikalavimų. Norėdami gauti detalią pasiūlymą, pritaikytą jūsų poreikiams, susisiekite su mūsų komanda el. paštu team@giggalab.com arba aplankykite Kontaktų puslapį!",
+            contactResponse: "Galite mus pasiekti el. paštu team@giggalab.com arba per Kontaktų puslapį. Atsakysime per 24 valandas!",
             portfolioResponse: "Peržiūrėkite mūsų Projektų puslapį, kad pamatytumėte naujausius darbus!",
-            defaultResponse: "Ačiū už jūsų žinutę! Jei turite konkrečių klausimų, aplankykite Kontaktų puslapį arba parašykite mums el. paštu."
+
+            // Informacija apie įmonę
+            aboutResponse: "GIGGALAB yra technologijų įmonė, įsikūrusi Vilniuje, Lietuvoje. Mes esame aistringi padėti verslui augti per inovatyvius skaitmeninius sprendimus. Mūsų misija: Jūsų sėkmė skatina mūsų misiją!",
+            locationResponse: "Esame Vilniuje, Lietuvoje, Europos Sąjungos širdyje. Dirbame su klientais tiek vietoje, tiek tarptautiniu mastu!",
+            teamResponse: "Mes esame aistringų kūrėjų, dizainerių ir technologijų ekspertų komanda, skirta teikti puikius rezultatus. Derinome kūrybiškumą su technine patirtimi, kad sukurtume sprendimus, kurie duoda realių rezultatų!",
+
+            // Verslo informacija
+            hoursResponse: "Mūsų pagalbos komanda dirba pirmadieniais-penktadieniais, 9:00 - 18:00 (GMT+2). Skubiais atvejais visada galite parašyti el. paštu team@giggalab.com!",
+            experienceResponse: "Turime didelę patirtį internetinių svetainių kūrime, mobiliosiose programose, AI/ML sprendimuose ir skaitmeninėje transformacijoje. Kiekvienas projektas pritaikomas konkretiems verslo tikslams!",
+            industriesResponse: "Dirbame su įmonėmis įvairiose pramonės šakose, įskaitant el. prekybą, sveikatos priežiūrą, finansų technologijas, švietimą ir kt. Kiekviena pramonės šaka turi unikalių iššūkių, ir mums patinka juos spręsti!",
+
+            // Techninė informacija
+            technologiesResponse: "Naudojame naujausias technologijas, įskaitant React, Node.js, Python, AI/ML frameworks, debesų platformas (AWS, Azure, Google Cloud) ir daugiau. Visada parenkame geriausią technologijų rinkinį jūsų konkretiems poreikiams!",
+            processResponse: "Mūsų procesas: 1) Atradimas - jūsų poreikių supratimas, 2) Strategija - sprendimo planavimas, 3) Vykdymas - kūrimas ir testavimas, 4) Augimas - nuolatinis palaikymas ir optimizavimas. Aplankykite mūsų svetainę ir sužinokite daugiau!",
+            timelineResponse: "Projekto trukmė priklauso nuo apimties ir sudėtingumo. Paprasti projektai gali užtrukti 2-4 savaites, o sudėtingi sprendimai - 2-6 mėnesius. Susisiekite su mumis el. paštu team@giggalab.com ir sužinokite konkrečią trukmę!",
+
+            // Palaikymas ir priežiūra
+            supportResponse: "Siūlome 24/7 techninę pagalbą, reguliarius atnaujinimus, saugumo stebėjimą ir našumo optimizavimą. Jūsų sėkmė yra nuolatinė, todėl ir mūsų palaikymas!",
+            maintenanceResponse: "Mūsų priežiūros paslaugos apima reguliarius atnaujinimus, saugumo pataisymus, našumo stebėjimą, atsarginių kopijų valdymą ir funkcijų tobulinimą. Palaikome jūsų sprendimą sklandžiai veikiantį!",
+
+            // Dažni klausimai
+            whyChooseResponse: "Mes skirtingi, nes jūsų sėkmė yra tiesiogiai mūsų misija. Mes ne tik pristatome projektus - tampame jūsų technologijų partneriu. Mes klestime tik tada, kai klestite jūs!",
+            startResponse: "Pradėti lengva! Susisiekite su mumis el. paštu team@giggalab.com arba užpildykite mūsų Kontaktų formą. Suplanuosime nemokamą konsultaciją, kad aptartume jūsų projektą ir tikslus!",
+            guaranteeResponse: "Esame įsipareigoję teikti aukštos kokybės sprendimus. Glaudžiai bendradarbiaujame su jumis visame procese, užtikrindami, kad galutinis produktas atitiktų jūsų lūkesčius ir verslo tikslus!",
+
+            // Numatytasis
+            defaultResponse: "Ačiū už jūsų žinutę! Jei turite konkrečių klausimų apie kainas, paslaugas ar projektus, susisiekite su mumis el. paštu team@giggalab.com arba aplankykite Kontaktų puslapį."
         }
     }
 };
