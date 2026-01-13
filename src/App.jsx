@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
-import LanguageSelector from './components/LanguageSelector';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
@@ -26,15 +25,7 @@ function ScrollToTop() {
 }
 
 function AppContent() {
-    const { isLanguageSelected, selectLanguage, isTransitioning } = useLanguage();
-    const [showSelector, setShowSelector] = React.useState(!isLanguageSelected);
-
-    const handleLanguageSelect = (lang) => {
-        selectLanguage(lang); // Switch language immediately
-        setTimeout(() => {
-            setShowSelector(false); // Remove selector after animation
-        }, 300);
-    };
+    const { isTransitioning } = useLanguage();
 
     return (
         <Router>
@@ -50,7 +41,6 @@ function AppContent() {
                 </Routes>
                 <Footer />
                 <ChatWidget />
-                {showSelector && <LanguageSelector onSelectLanguage={handleLanguageSelect} />}
             </div>
         </Router>
     );
