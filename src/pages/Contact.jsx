@@ -1,7 +1,6 @@
 ﻿import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import CustomSelect from '../components/CustomSelect';
-import emailjs from '@emailjs/browser';
 
 function Contact() {
     const { t } = useLanguage();
@@ -32,59 +31,75 @@ function Contact() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
         
-        // EmailJS configuration from environment variables
-        const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
-        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+        // Web3Forms configuration
+        const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY';
         
-        // Send email using EmailJS
-        emailjs.send(serviceId, templateId, {
-            from_name: formData.name,
-            from_email: formData.email,
+        // Prepare form data for Web3Forms
+        const formDataToSend = {
+            access_key: accessKey,
+            name: formData.name,
+            email: formData.email,
             phone: formData.phone,
             company: formData.company,
             service: formData.service,
             budget: formData.budget,
             message: formData.message,
-            to_email: 'team@giggalab.com'
-        }, publicKey)
-        .then((response) => {
-            console.log('Email sent successfully:', response);
-            setIsLoading(false);
-            setSubmitted(true);
-            
-            // Scroll to success message
-            setTimeout(() => {
-                if (successMessageRef.current) {
-                    successMessageRef.current.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'center' 
-                    });
-                }
-            }, 100);
+            subject: `New Contact Form Submission from ${formData.name}`,
+            from_name: 'GiggaLab Contact Form',
+            replyto: formData.email
+        };
 
-            setTimeout(() => {
-                setSubmitted(false);
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    company: '',
-                    service: '',
-                    budget: '',
-                    message: ''
-                });
-            }, 3000);
-        })
-        .catch((error) => {
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formDataToSend)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                console.log('Email sent successfully:', result);
+                setIsLoading(false);
+                setSubmitted(true);
+                
+                // Scroll to success message
+                setTimeout(() => {
+                    if (successMessageRef.current) {
+                        successMessageRef.current.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                    }
+                }, 100);
+
+                setTimeout(() => {
+                    setSubmitted(false);
+                    setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        company: '',
+                        service: '',
+                        budget: '',
+                        message: ''
+                    });
+                }, 3000);
+            } else {
+                throw new Error(result.message || 'Failed to send message');
+            }
+        } catch (error) {
             console.error('Failed to send email:', error);
             setIsLoading(false);
             alert('Failed to send message. Please try again or contact us directly at team@giggalab.com');
-        });
+        }
     };
 
     return (
