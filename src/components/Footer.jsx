@@ -31,10 +31,9 @@ function Footer() {
         <div className="footer-links">
           <h4>{t.footer.connect}</h4>
           <ul>
-            <li><a href="#">{t.footer.connectLinks[0]}</a></li>
-            <li><a href="#">{t.footer.connectLinks[1]}</a></li>
-            <li><a href="#">{t.footer.connectLinks[2]}</a></li>
-            <li><Link to="/contact">{t.footer.connectLinks[3]}</Link></li>
+            <li><a href="https://www.linkedin.com/in/giggalab-it-solutions-83abb83a5/" target="_blank" rel="noopener noreferrer">{t.footer.connectLinks[0]}</a></li>
+            <li><a href="https://www.instagram.com/giggalab/" target="_blank" rel="noopener noreferrer">{t.footer.connectLinks[1]}</a></li>
+            <li><Link to="/contact">{t.footer.connectLinks[2]}</Link></li>
           </ul>
         </div>
       </div>

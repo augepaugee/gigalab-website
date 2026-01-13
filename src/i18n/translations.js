@@ -166,7 +166,7 @@ export const translations = {
             companySection: "Company",
             companyLinks: ["About Us", "Portfolio"],
             connect: "Connect",
-            connectLinks: ["LinkedIn", "Instagram", "GitHub", "Contact"],
+            connectLinks: ["LinkedIn", "Instagram", "Contact"],
             copyright: "2026 GIGGALAB. Your Success, Our Mission."
         },
         // Chat Widget
@@ -376,7 +376,7 @@ export const translations = {
             companySection: "Įmonė",
             companyLinks: ["Apie mus", "Projektai"],
             connect: "Susisiekite",
-            connectLinks: ["LinkedIn", "Instagram", "GitHub", "Kontaktai"],
+            connectLinks: ["LinkedIn", "Instagram", "Kontaktai"],
             copyright: "2026 GIGGALAB. Jūsų sėkmė, mūsų misija."
         },
         // Chat Widget
