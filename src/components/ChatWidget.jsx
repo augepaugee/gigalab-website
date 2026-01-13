@@ -120,12 +120,15 @@ const ChatWidget = () => {
     const processMessage = (messageText) => {
         setIsTyping(true);
 
-        // Calculate response delay based on message length (more realistic)
-        const responseDelay = Math.min(Math.max(messageText.length * 30, 800), 2500);
+        // Get bot response first to calculate realistic delay
+        const botResponseText = getBotResponse(messageText);
+        
+        // Calculate response delay based on bot response length (more realistic)
+        const responseDelay = Math.min(Math.max(botResponseText.length * 20, 1200), 4000);
 
         setTimeout(() => {
             const botResponse = {
-                text: getBotResponse(messageText),
+                text: botResponseText,
                 sender: 'bot',
                 timestamp: new Date()
             };
@@ -191,7 +194,9 @@ const ChatWidget = () => {
         else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('kaina') || 
                  lowerMessage.includes('kiek kainuoja') || lowerMessage.includes('how much') || lowerMessage.includes('pricing') ||
                  lowerMessage.includes('budget') || lowerMessage.includes('quote') || lowerMessage.includes('biudžetas') ||
-                 lowerMessage.includes('estimate') || lowerMessage.includes('fee') || lowerMessage.includes('expensive')) {
+                 lowerMessage.includes('estimate') || lowerMessage.includes('fee') || lowerMessage.includes('expensive') ||
+                 lowerMessage.includes('kainos') || lowerMessage.includes('kainų') || lowerMessage.includes('koks') ||
+                 lowerMessage.includes('kokia kaina') || lowerMessage.includes('kokios kainos') || lowerMessage.includes('mokestis')) {
             return t.chat?.priceResponse || "Our pricing varies depending on project scope and specific requirements. We offer a monthly payment plan with a lower upfront cost and reduced financial risk for our customers. Typically, the monthly fee ranges from €30 to €100, including domain and hosting services, and is determined by the complexity of the project. For a detailed quote tailored to your needs, please contact our team at team@giggalab.com or visit our Contact page.";
         } 
         
