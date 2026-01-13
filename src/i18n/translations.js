@@ -113,7 +113,7 @@ export const translations = {
             formNote: "Fill out this form or contact us via contacts below",
             success: {
                 title: "Message Sent Successfully!",
-                message: "We'll get back to you within 24 hours."
+                message: "We'll get back to you within 8 hours."
             },
             form: {
                 fullName: "Full Name",
@@ -178,7 +178,7 @@ export const translations = {
             greeting: "Hello! How can I assist you today?",
             servicesResponse: "We offer web development, mobile apps, AI/ML solutions, and more. Visit our Services page for details!",
             priceResponse: "Our pricing varies based on project scope and requirements. For a detailed quote tailored to your needs, please contact our team at team@giggalab.com or visit our Contact page!",
-            contactResponse: "You can reach us at team@giggalab.com or through our Contact page. We'll get back to you within 24 hours!",
+            contactResponse: "You can reach us at team@giggalab.com or through our Contact page. We'll get back to you within 8 hours!",
             portfolioResponse: "Check out our Portfolio page to see our latest projects!",
 
             // Company Information
@@ -323,7 +323,7 @@ export const translations = {
             formNote: "Užpildykite šią formą arba susisiekite su mumis per žemiau pateiktus kontaktus",
             success: {
                 title: "Žinutė sėkmingai išsiųsta!",
-                message: "Atsakysime per 24 valandas."
+                message: "Atsakysime per 8 valandas."
             },
             form: {
                 fullName: "Vardas ir pavardė",
@@ -388,7 +388,7 @@ export const translations = {
             greeting: "Sveiki! Kaip galiu jums padėti?",
             servicesResponse: "Siūlome internetinių svetainių kūrimą, mobiliąsias programas, AI/ML sprendimus ir dar daugiau. Aplankykite mūsų Paslaugų puslapį!",
             priceResponse: "Mūsų kainos priklauso nuo projekto apimties ir reikalavimų. Norėdami gauti detalią pasiūlymą, pritaikytą jūsų poreikiams, susisiekite su mūsų komanda el. paštu team@giggalab.com arba aplankykite Kontaktų puslapį!",
-            contactResponse: "Galite mus pasiekti el. paštu team@giggalab.com arba per Kontaktų puslapį. Atsakysime per 24 valandas!",
+            contactResponse: "Galite mus pasiekti el. paštu team@giggalab.com arba per Kontaktų puslapį. Atsakysime per 8 valandas!",
             portfolioResponse: "Peržiūrėkite mūsų Projektų puslapį, kad pamatytumėte naujausius darbus!",
 
             // Informacija apie įmonę

@@ -1,10 +1,11 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import CustomSelect from '../components/CustomSelect';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
     const { t } = useLanguage();
+    const successMessageRef = useRef(null);
     
     const [formData, setFormData] = useState({
         name: '',
@@ -17,6 +18,7 @@ function Contact() {
     });
 
     const [submitted, setSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     // Scroll to top on component mount
     useEffect(() => {
@@ -32,6 +34,7 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsLoading(true);
         
         // EmailJS configuration from environment variables
         const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
@@ -51,7 +54,18 @@ function Contact() {
         }, publicKey)
         .then((response) => {
             console.log('Email sent successfully:', response);
+            setIsLoading(false);
             setSubmitted(true);
+            
+            // Scroll to success message
+            setTimeout(() => {
+                if (successMessageRef.current) {
+                    successMessageRef.current.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                }
+            }, 100);
 
             setTimeout(() => {
                 setSubmitted(false);
@@ -68,6 +82,7 @@ function Contact() {
         })
         .catch((error) => {
             console.error('Failed to send email:', error);
+            setIsLoading(false);
             alert('Failed to send message. Please try again or contact us directly at team@giggalab.com');
         });
     };
@@ -89,7 +104,7 @@ function Contact() {
                 <div className="contact-form-container">
 
                     {submitted && (
-                        <div className="success-message">
+                        <div className="success-message" ref={successMessageRef}>
                             <div className="success-icon">✓</div>
                             <h3>{t.contact.success.title}</h3>
                             <p>{t.contact.success.message}</p>
@@ -210,9 +225,18 @@ function Contact() {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="submit-btn-modern">
-                            <span>{t.contact.form.submit}</span>
-                            <span className="btn-arrow">→</span>
+                        <button type="submit" className="submit-btn-modern" disabled={isLoading}>
+                            {isLoading ? (
+                                <>
+                                    <span className="spinner"></span>
+                                    <span>Sending...</span>
+                                </>
+                            ) : (
+                                <>
+                                    <span>{t.contact.form.submit}</span>
+                                    <span className="btn-arrow">→</span>
+                                </>
+                            )}
                         </button>
                     </form>
 
