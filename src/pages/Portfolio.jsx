@@ -4,6 +4,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { project1 } from '../portfolio/project1';
 import { project2 } from '../portfolio/project2';
 import { project3 } from '../portfolio/project3';
+import { project4 } from '../portfolio/project4';
 
 function Portfolio() {
     const { t } = useLanguage();
@@ -17,6 +18,7 @@ function Portfolio() {
             project1,
             project2,
             project3,
+            project4,
             // Add more projects here as you create them
         ];
         
@@ -113,6 +115,8 @@ function Portfolio() {
                                                         style={{ 
                                                             width: '100%',
                                                             height: 'auto',
+                                                            maxHeight: '600px',
+                                                            objectFit: 'contain',
                                                             display: 'block',
                                                             borderRadius: '8px',
                                                             flexShrink: 0
