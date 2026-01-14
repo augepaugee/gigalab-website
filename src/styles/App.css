@@ -1243,6 +1243,37 @@ footer {
 
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
+    /* Reposition logo to left on mobile */
+    .hero-logo {
+        left: 20px;
+        transform: none;
+    }
+
+    .hero-logo.hidden {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+    }
+
+    .hero-logo h1 {
+        display: flex;
+        align-items: center;
+        height: 48px;
+    }
+
+    /* Adjust floating cards z-index for proper layering on mobile */
+    .card-1 {
+        z-index: 3;
+    }
+
+    .card-2 {
+        z-index: 2;
+    }
+
+    .card-3 {
+        z-index: 1;
+    }
+
     /* Services grid - single column on mobile */
     .services {
         padding: 60px 15px;

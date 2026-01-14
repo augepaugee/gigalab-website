@@ -50,14 +50,26 @@
 .language-dropdown {
     position: absolute;
     top: calc(100% + 8px);
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     min-width: 160px;
     background: var(--card-bg);
     border: 1px solid rgba(77, 77, 255, 0.2);
     border-radius: 12px;
     padding: 8px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
-    animation: dropdownSlide 0.2s ease;
+    animation: dropdownSlideCenter 0.2s ease;
+}
+
+@keyframes dropdownSlideCenter {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 @keyframes dropdownSlide {
@@ -111,14 +123,29 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
     .language-switcher {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        order: -1;
+        position: absolute;
+        top: 20px;
+        right: 76px;
+        left: auto;
+        transform: none;
+        margin: 0;
+        z-index: 1001;
     }
 
     .language-switcher-button {
         padding: 10px 16px;
         font-size: 1em;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease;
+    }
+
+    .language-switcher-button:hover,
+    .language-switcher-button:active {
+        transform: scale(0.98);
+        background: rgba(77, 77, 255, 0.15);
+        border-color: var(--primary-blue);
     }
 
     .flag-icon {
@@ -140,6 +167,19 @@
         left: 50%;
         right: auto;
         transform: translateX(-50%);
+        animation: dropdownSlideCenter 0.2s ease;
+        top: calc(100% + 8px);
+    }
+
+    @keyframes dropdownSlideCenter {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     }
 
     .language-option {
