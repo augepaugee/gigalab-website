@@ -13,8 +13,8 @@ const SEO = ({
     const siteUrl = 'https://www.giggalab.com'; // Update with your actual domain
     const currentUrl = `${siteUrl}${location.pathname}`;
 
-    const defaultTitle = 'GIGGALAB | IT Solutions & Digital Innovation';
-    const defaultDescription = 'Leading IT solutions provider in Vilnius, Lithuania. Web development, mobile apps, AI/ML solutions, and digital transformation services. Monthly payment plans from €30-€100. Contact us at team@giggalab.com';
+    const defaultTitle = 'GIGGALAB | IT Solutions';
+    const defaultDescription = 'Your success is our mission. We create digital solutions that drive real business results.';
     const defaultKeywords = 'IT solutions, web development, mobile apps, AI solutions, digital transformation, website development, app development, Vilnius, Lithuania, GIGGALAB, software development, cloud solutions, custom software';
 
     const seo = {
