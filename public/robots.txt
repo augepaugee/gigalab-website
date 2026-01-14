@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://giggalab.com/sitemap.xml
+Sitemap: https://www.giggalab.com/sitemap.xml
 
 # Crawl-delay for bots
 Crawl-delay: 1

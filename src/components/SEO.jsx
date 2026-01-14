@@ -10,7 +10,7 @@ const SEO = ({
     article = false 
 }) => {
     const location = useLocation();
-    const siteUrl = 'https://giggalab.com'; // Update with your actual domain
+    const siteUrl = 'https://www.giggalab.com'; // Update with your actual domain
     const currentUrl = `${siteUrl}${location.pathname}`;
 
     const defaultTitle = 'GIGGALAB | IT Solutions & Digital Innovation';
