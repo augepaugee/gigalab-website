@@ -2,12 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <link rel="icon" type="image/jpeg" href="%PUBLIC_URL%/favicon.jpg" />
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#4D4DFF" />
-    <meta name="description" content="GIGGALAB - Your Success, Our Mission. IT Solutions for Business Growth" />
-    <title>GIGGALAB | IT Solutions</title>
+    <meta name="description" content="GIGGALAB - Leading IT solutions in Vilnius, Lithuania. Web development, mobile apps, AI/ML solutions. Monthly plans €30-€100. Your Success, Our Mission. Contact: team@giggalab.com" />
+    <meta name="keywords" content="IT solutions, web development, mobile apps, AI solutions, Vilnius, Lithuania, GIGGALAB, software development, digital transformation" />
+    <meta name="author" content="GIGGALAB" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://giggalab.com/" />
+    <meta property="og:title" content="GIGGALAB | IT Solutions & Digital Innovation" />
+    <meta property="og:description" content="Leading IT solutions provider in Vilnius, Lithuania. Web development, mobile apps, AI/ML solutions. Monthly plans from €30-€100." />
+    <meta property="og:image" content="https://giggalab.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://giggalab.com/" />
+    <meta property="twitter:title" content="GIGGALAB | IT Solutions & Digital Innovation" />
+    <meta property="twitter:description" content="Leading IT solutions provider in Vilnius, Lithuania. Web development, mobile apps, AI/ML solutions." />
+    <meta property="twitter:image" content="https://giggalab.com/og-image.jpg" />
+    
+    <link rel="canonical" href="https://giggalab.com/" />
+    <title>GIGGALAB | IT Solutions & Digital Innovation in Vilnius, Lithuania</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
+import SEO from '../components/SEO';
 
 function Home() {
     const { t } = useLanguage();
@@ -29,6 +30,11 @@ function Home() {
 
     return (
         <div className="page">
+            <SEO 
+                title="GIGGALAB | IT Solutions & Digital Innovation in Vilnius"
+                description="Leading IT solutions provider in Vilnius, Lithuania. Expert web development, mobile apps, AI/ML solutions, and digital transformation. Monthly plans from €30-€100 including hosting. Contact team@giggalab.com"
+                keywords="IT solutions Vilnius, web development Lithuania, mobile app development, AI solutions, digital transformation, custom software, website design, app development Vilnius, GIGGALAB, software company Lithuania"
+            />
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-content">
