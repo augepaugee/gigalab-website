@@ -112,6 +112,7 @@ function Portfolio() {
                                                         key={index}
                                                         src={image} 
                                                         alt={`${project.title} - Slide ${index + 1}`}
+                                                        loading="lazy"
                                                         style={{ 
                                                             width: '100%',
                                                             height: 'auto',

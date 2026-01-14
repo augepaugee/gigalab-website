@@ -23,6 +23,7 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-display: swap;
     background: var(--darker-bg);
     color: var(--text-gray);
     overflow-x: hidden;

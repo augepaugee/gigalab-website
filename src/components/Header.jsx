@@ -4,10 +4,9 @@ import { useLanguage } from '../i18n/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 
 function Header() {
-    const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
-    const { language, toggleLanguage, t } = useLanguage();
+    const { t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
