@@ -6,7 +6,7 @@ const SEO = ({
     title, 
     description, 
     keywords,
-    ogImage = '/og-image.jpg',
+    ogImage = '/og-image.png',
     article = false 
 }) => {
     const location = useLocation();
